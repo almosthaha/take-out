@@ -4,3 +4,6 @@
 *.class
 *Test.java
 **/test/
+#当前的网络配置和github的网络配置要一样
+[http]
+    version=HTTP/1.1
