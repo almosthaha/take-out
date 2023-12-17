@@ -2,12 +2,15 @@ package com.sky.controller.admin;
 
 import com.sky.dto.CategoryDTO;
 import com.sky.dto.CategoryPageQueryDTO;
+import com.sky.entity.Category;
 import com.sky.result.PageResult;
 import com.sky.result.Result;
 import com.sky.service.CategoryService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * @author almost
@@ -58,5 +61,12 @@ public class CategoryController {
     public Result updateStatus(@PathVariable Integer status, long id){
         categoryService.updateStatus(id,status);
         return Result.success();
+    }
+
+    @GetMapping("/list")
+    @ApiOperation("获取分类列表")
+    public Result getList(){
+        List<Category> list = categoryService.getList();
+        return Result.success(list);
     }
 }

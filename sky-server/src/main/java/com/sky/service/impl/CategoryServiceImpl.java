@@ -71,4 +71,10 @@ public class CategoryServiceImpl implements CategoryService {
                 .build();
         categoryMapper.update(category);
     }
+
+    @Override
+    public List<Category> getList() {
+        List<Category> list = categoryMapper.getList();
+        return list;
+    }
 }

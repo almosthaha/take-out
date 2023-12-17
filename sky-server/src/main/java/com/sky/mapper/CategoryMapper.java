@@ -7,6 +7,8 @@ import com.sky.entity.Category;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 /**
  * @author almost
  * @date 2023/12/10 13:27
@@ -26,4 +28,6 @@ public interface CategoryMapper {
 
 
     void update(Category category);
+
+    List<Category> getList();
 }

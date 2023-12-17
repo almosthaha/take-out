@@ -2,7 +2,10 @@ package com.sky.service;
 
 import com.sky.dto.CategoryDTO;
 import com.sky.dto.CategoryPageQueryDTO;
+import com.sky.entity.Category;
 import com.sky.result.PageResult;
+
+import java.util.List;
 
 /**
  * @author almost
@@ -19,4 +22,6 @@ public interface CategoryService {
     void update(CategoryDTO categoryDTO);
 
     void updateStatus(Long id,Integer status);
+
+    List<Category> getList();
 }

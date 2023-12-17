@@ -31,4 +31,7 @@
         delete from category where id=#{id}
     </delete>
 
+    <select id="getList" resultType="category">
+        select * from category
+    </select>
 </mapper>
